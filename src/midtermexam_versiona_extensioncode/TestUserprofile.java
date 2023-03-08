@@ -13,11 +13,13 @@ import java.util.*;
 public class TestUserprofile {
 
     public static void main(String[] args) {
+
         Scanner kb = new Scanner(System.in);
         System.out.println("Enter your name: ");
         String name = kb.nextLine();
 
         System.out.println("Choose your favorite genre (Comedy, Drama, Action, Mystery)");
+
         String genre = kb.nextLine();
 
         UserProfile newUser = new UserProfile(name, genre);
