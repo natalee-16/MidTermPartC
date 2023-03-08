@@ -18,11 +18,14 @@ public class TestUserprofile {
         System.out.println("Enter your name: ");
         String name = kb.nextLine();
 
-        System.out.println("Choose your favorite genre (Comedy, Drama, Action, Mystery)");
+        System.out.println("Choose your favorite genre from the following list:)");
+        for (int i = 0; i < UserProfile.genres.length; i++) {
+            
+            System.out.println((i+1) + ". " + UserProfile.genres[i]);
+        }
+        int genre = kb.nextInt();
 
-        String genre = kb.nextLine();
-
-        UserProfile newUser = new UserProfile(name, genre);
+        UserProfile newUser = new UserProfile(name, UserProfile.genres[genre-1]);
         System.out.println("Your account has been created");
 
     }
